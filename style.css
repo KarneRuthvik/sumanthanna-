@@ -1,0 +1,350 @@
+/* General Styles */
+*{
+  overflow-x:hidden;/* Remove scrolling */
+ }
+ body::-webkit-scrollbar {
+    width: 0; /* Hide the scrollbar */
+}
+
+/* Hide scrollbar for Firefox */
+body {
+    scrollbar-width: none; /* Hide the scrollbar */
+}
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #030F0F;
+    color: #FFFFFF;
+    overflow-x: hidden;
+  }
+  
+  header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+    background-color: transparent;
+    /* Transparent Navbar */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    right:1%;
+  }
+  
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  nav ul li {
+    margin-left: 20px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-weight: 600;
+    transition: color 0.3s ease;
+  }
+  
+  nav ul li a:hover {
+    color: #00DF82;
+  }
+  
+  /* Hero Section */
+  .hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px; /* Simplified padding */
+    min-height: 100vh;
+    background-color: #030F0F;
+    overflow: hidden; /* Important: Prevents content from overflowing during animation */
+  }
+  
+  .hero-text {
+    max-width: 50%;
+    animation: moveUp 1s ease-in-out forwards; /* Animation properties */
+  }
+  
+  .hero-text h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: #00DF82;
+  }
+  
+  .hero-text p {
+    font-size: 1.5rem;
+    color: #FFFFFF;
+  }
+  
+  @keyframes moveUp {
+    from {
+      transform: translateY(100%); /* Start below the viewport */
+      opacity: 0; /* Start transparent */
+    }
+    to {
+      transform: translateY(0); /* End at its normal position */
+      opacity: 1; /* End fully visible */
+    }
+  }
+  
+  .typing-animation {
+    color: #00DF82;
+    font-weight: bold;
+  }
+  
+  .hero-image img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 5px solid #00DF82;
+    object-fit: cover;
+  }
+  .about-me-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Full viewport height */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.about-me-section  h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 800px;
+    width: 100%;
+}
+
+.content p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    max-width: 60%;
+}
+
+.circle-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Make the image circular */
+    object-fit: cover; /* Ensure the image covers the circle */
+    margin-left: 20px;
+}
+
+.skills-section {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2.5em;
+  margin-bottom: 40px;
+  color: white;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* Space between boxes */
+}
+
+.skill-box {
+  width: 150px;
+  height: 150px;
+  background-color: #1C1C1C; /* Darker box background */
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-box:hover {
+  transform: translateY(-10px); /* Lift effect on hover */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Shadow on hover */
+}
+
+.skill-box i {
+  font-size: 3em;
+  color: #00FF88; /* Icon color */
+  margin-bottom: 10px;
+}
+
+.skill-box span {
+  font-size: 1.2em;
+  color: white; /* Text color */
+}
+.projects-section {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2.5em;
+  margin-bottom: 40px;
+  color: white;
+}
+
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* Space between boxes */
+}
+
+.project-box {
+  width: 300px;
+  height: 250px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: #2C2C2C; /* Slightly lighter background for boxes */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the image covers the box */
+  border-radius: 10px;
+}
+
+.project-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  color: white;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+.visit-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent overlay */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0; /* Hidden by default */
+  transition: opacity 0.3s ease;
+  border-radius: 10px;
+}
+
+.visit-overlay a {
+  padding: 10px 20px;
+  background-color: #00FF88; /* Button color */
+  color: #1C1C1C; /* Text color */
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+  transition: background-color 0.3s ease;
+}
+
+.visit-overlay a:hover {
+  background-color: #00CC66; /* Button hover color */
+}
+
+.project-box:hover .visit-overlay {
+  opacity: 1; /* Show overlay on hover */
+}
+
+.project-box:hover {
+  transform: translateY(-10px); /* Lift effect on hover */
+  box-shadow: 0 10px 20px rgba(0, 0, 0,  0.5); /* Shadow effect on hover */
+}
+.contact-section {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;/* Darker background for the contact section */
+  border-radius: 10px;
+  text-align:left;
+}
+
+h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  text-align: left; /* Align labels to the left */
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 1.2em;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  color: white; /* Input text color */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  outline: none; /* Remove outline on focus */
+  background-color: #4C4C4C; /* Darker background on focus */
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #00FF88; /* Button color */
+  color: #1C1C1C; /* Button text color */
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #00CC66; /* Button hover color */
+}
+.copyright-section {
+  text-align: center;
+  padding: 20px;
+  background-color: #2C2C2C; /* Darker background for the copyright section */
+  border-top: 1px solid #444; /* Add a subtle border at the top */
+  font-size: 0.9em;
+  color: #888; /* Light gray text color */
+  margin-top: 50px; /* Add some space above the copyright section */
+}
+::-webkit-scrollbar {
+  width: 0px; /* Or a very small value for a thin scrollbar */
+  height: 0px; /* For horizontal scrollbars */
+}
+
+/* Optional: Style the thumb and track (if you don't set width/height to 0) */
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2); /* Example: Semi-transparent black */
+  border-radius: 4px;
+}
